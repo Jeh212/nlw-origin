@@ -4,16 +4,26 @@ import { FeedBackType, feedbackTypes } from "../WidgetForm";
 
 interface FeedBackStepProps {
     feedBackType: FeedBackType
+    onFeedbackRestart: () => void
+
 }
 
 
-function FeedbackContentSteps({ feedBackType }: FeedBackStepProps) {
+function FeedbackContentSteps({
+    feedBackType,
+    onFeedbackRestart
+}: FeedBackStepProps) {
 
     const feedbackTypeInfo = feedbackTypes[feedBackType];
     return (
         <>
             <header>
-                <button type="button" className="top-5 left-5 absolute text-zinc-400 hover:text-zinc-100">
+
+                <button
+                    type="button"
+                    className="top-5 left-5 absolute text-zinc-400 hover:text-zinc-100"
+                    onClick={onFeedbackRestart}
+                >
                     <ArrowLeft weight="bold" className="w-4 h-4" />
                 </button>
                 <span className="text-xl leading-6 flex items-center gap-2">

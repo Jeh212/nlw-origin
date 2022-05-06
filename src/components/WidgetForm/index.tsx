@@ -48,7 +48,7 @@ function WidgetForm() {
   const [feedbackType, setfeedbackType] = useState<FeedBackType | null>(null);
 
   function handleRestartFeedBack() {
-
+    setfeedbackType(null);
   }
 
   return (
@@ -58,7 +58,7 @@ function WidgetForm() {
       {!feedbackType ? (
         <FeedbackTypeSteps onFeedBackTypeChanged={setfeedbackType} />
       ) : (
-        <FeedbackContentSteps feedBackType={ } />
+        <FeedbackContentSteps feedBackType={feedbackType} onFeedbackRestart={handleRestartFeedBack} />
       )}
       <footer className="text-xs text-neutral-400">
         Feito com amor por{" "}
