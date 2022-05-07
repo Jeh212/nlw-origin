@@ -60,7 +60,7 @@ function WidgetForm() {
       ) : (
         <FeedbackContentSteps feedBackType={feedbackType} onFeedbackRestart={handleRestartFeedBack} />
       )}
-      <footer className="text-xs text-neutral-400">
+      <footer className="text-xs text-neutral-400 mt-4">
         Feito com amor por{" "}
         <a
           className="underline underline-offset-2"
